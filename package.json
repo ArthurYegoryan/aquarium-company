@@ -1,0 +1,20 @@
+{
+  "name": "aquarium-company",
+  "version": "1.0.0",
+  "description": "Aquarium company project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "webpack",
+    "html",
+    "css"
+  ],
+  "author": "A. Yegoryan <arthur.yegoryan.97@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.89.0"
+  }
+}
