@@ -28,3 +28,5 @@ aquarium.appendChild(fishButton);
 aquariumSection.appendChild(aquarium);
 
 root.appendChild(aquariumSection);
+
+export { fishButton, aquarium };

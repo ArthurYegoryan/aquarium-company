@@ -9,7 +9,7 @@ module.exports = {
     performance: {
         hints: false // make warnings comment
     },
-    mode: "production", // "development"
+    mode: "production", // "development", "production"
     entry: {
         main: path.resolve(__dirname, "src/index.js")
     },
