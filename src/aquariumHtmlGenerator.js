@@ -29,4 +29,4 @@ aquariumSection.appendChild(aquarium);
 
 root.appendChild(aquariumSection);
 
-export { fishButton, aquarium };
+export { fishButton, aquarium, fishGif };
