@@ -1,0 +1,63 @@
+#root{
+    width: 100%;
+    height: 100vh;
+    background: #A723B1;
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.openButton{
+   list-style: none;
+   height: 50px;
+   margin-right:100px ;
+   top: 50px;
+   float: right;
+   padding: 10px 60px;
+   color: #fff;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: 30px;
+   font-weight: 500;
+   border-radius: 30px;
+}
+
+.openDiv{
+    align-items: center;
+    position: absolute;
+    background-color: #fff;
+    width: 500px;
+    height: 600px;
+    top: 0;
+    left: 80%;
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s ;
+}
+
+.newOpen{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.close{
+    background-color: #fff;
+    float: right;
+    border: none;
+    cursor: pointer;
+}
+
+.mailImg{
+    width: 30px;
+    height: 30px;
+}
+
+.callImg{
+    top: 100px;
+    width: 30px;
+    height: 30px;
+}
