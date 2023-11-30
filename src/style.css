@@ -3,18 +3,42 @@
     padding: 0;
 }
 
+.test {
+    background-image: url("../img/aquarium.gif");
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: aqua;
+    margin-top: 100px;
+}
+
 .aquarium-section {
     display: flex;
     justify-content: center;
 }
 
 .aquarium {
+    position: relative;
     width: 600px;
     height: 450px;
     margin-top: 50px;
     border: 5px solid brown;
 }
 
-.aquarium > img {
+.aquarium-gif-div {
+    width: 100%;
+}
+
+.fish-button {
+    position: absolute;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    border: none;
+    margin: 5px;
+}
+
+.fish-button > img {
     width: 100%;
 }
