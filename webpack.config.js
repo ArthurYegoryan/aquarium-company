@@ -36,6 +36,17 @@ module.exports = {
                     name: '[path][name].[ext]',
                 },
             },
+            {
+                test: /\.(png|jpg|gif|svg|webp)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                        },
+                    },
+                ],
+            },
         ],
     },
     optimization: {
