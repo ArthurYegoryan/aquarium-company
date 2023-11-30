@@ -3,14 +3,14 @@
     padding: 0;
 }
 
-.test {
+/* .test {
     background-image: url("../img/aquarium.gif");
     width: 200px;
     height: 200px;
     border: 1px solid black;
     background-color: aqua;
     margin-top: 100px;
-}
+} */
 
 .aquarium-section {
     display: flex;
@@ -37,7 +37,7 @@
     padding: 0;
     border: none;
     margin: 5px;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .fish-button > img {

@@ -1,5 +1,7 @@
 import fishReverse from "../img/fishReverse.gif";
 import fish from "../img/fish.gif";
+import fishUp from "../img/fishUp.gif";
+import fishDown from "../img/fishDown.gif";
 import "./aquariumHtmlGenerator.js";
 import { fishButton, aquarium, fishGif } from "./aquariumHtmlGenerator.js";
 import randomCoordinateGenerator from "./randomCoordinateGenerator.js";
@@ -13,8 +15,9 @@ const fishWidthCenter = fishButton.offsetWidth / 2 + aquariumBorderWidth;
 let currentHorizontalPoint = fishWidthCenter;
 
 fishButton.addEventListener("click", () => {
-    let newHorizontalPoint = randomCoordinateGenerator(aquarium.offsetWidth - fishButton.offsetWidth - (aquariumBorderWidth + fishButtonMargin));
-    const newVerticalPoint = randomCoordinateGenerator(aquarium.offsetHeight - fishButton.offsetHeight - (aquariumBorderWidth + fishButtonMargin));
+    const borderMarginDiff = 2 * aquariumBorderWidth + fishButtonMargin;
+    let newHorizontalPoint = randomCoordinateGenerator(aquarium.offsetWidth - fishButton.offsetWidth - borderMarginDiff);
+    const newVerticalPoint = randomCoordinateGenerator(aquarium.offsetHeight - fishButton.offsetHeight - borderMarginDiff);
 
     if (newHorizontalPoint < fishWidthCenter) {
         newHorizontalPoint = 0;
