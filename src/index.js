@@ -1,2 +1,2 @@
-import "./style.css";
+import "./aquariumStyle.css";
 import "./aquarium.js";
