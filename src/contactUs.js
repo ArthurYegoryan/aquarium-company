@@ -134,3 +134,5 @@ for(let i = 0; i< imgPaths.length;i++){
     div.appendChild(document.createElement("br"))
     div.appendChild(document.createElement("br"))
 }
+
+export { div };
