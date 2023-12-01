@@ -39,60 +39,60 @@ module.exports = {
                     name: '[path][name].[ext]',
                 },
             },
-            // {
-            //     test: /\.(png|jpg|gif|svg|webp)$/i,
-            //     use: [
-            //         {
-            //             loader: 'url-loader',
-            //             options: {
-            //                 limit: 8192,
-            //             },
-            //         },
-            //     ],
-            // },
-            // {
-            //     test: /\.(jpe?g|png|gif|svg)$/i,
-            //     type: "asset",
-            // },
+            {
+                test: /\.(png|jpg|gif|svg|webp)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                        },
+                    },
+                ],
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                type: "asset",
+            },
         ],
     },
-    // optimization: {
-    //     minimizer: [
-    //         "...",
-    //         new ImageMinimizerPlugin({
-    //             minimizer: {
-    //                 implementation: ImageMinimizerPlugin.imageminMinify,
-    //                 options: {
-    //                     plugins: [
-    //                         ["gifsicle", { interlaced: true }],
-    //                         ["jpegtran", { progressive: true }],
-    //                         ["optipng", { optimizationLevel: 5 }],
-    //                         [
-    //                             "svgo",
-    //                             {
-    //                                 plugins: [
-    //                                     {
-    //                                         name: "preset-default",
-    //                                         params: {
-    //                                             overrides: {
-    //                                                 removeViewBox: false,
-    //                                                 addAttributesToSVGElement: {
-    //                                                     params: {
-    //                                                         attributes: [
-    //                                                             { xmlns: "http://www.w3.org/2000/svg" },
-    //                                                         ],
-    //                                                     },
-    //                                                 },
-    //                                             },
-    //                                         },
-    //                                     },
-    //                                 ],
-    //                             },
-    //                         ],
-    //                     ],
-    //                 },
-    //             },
-    //         }),
-    //     ],
-    // },
+    optimization: {
+        minimizer: [
+            "...",
+            new ImageMinimizerPlugin({
+                minimizer: {
+                    implementation: ImageMinimizerPlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                            ["gifsicle", { interlaced: true }],
+                            ["jpegtran", { progressive: true }],
+                            ["optipng", { optimizationLevel: 5 }],
+                            [
+                                "svgo",
+                                {
+                                    plugins: [
+                                        {
+                                            name: "preset-default",
+                                            params: {
+                                                overrides: {
+                                                    removeViewBox: false,
+                                                    addAttributesToSVGElement: {
+                                                        params: {
+                                                            attributes: [
+                                                                { xmlns: "http://www.w3.org/2000/svg" },
+                                                            ],
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    ],
+                                },
+                            ],
+                        ],
+                    },
+                },
+            }),
+        ],
+    },
 }
