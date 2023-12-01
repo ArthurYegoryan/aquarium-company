@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  scroll-snap-align: start;
+  overflow-x: hidden;
+}
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: aliceblue;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.logo {
+  width: 210px;
+  padding: 10px;
+}
+ul {
+  padding: 18px;
+  display: flex;
+  list-style-type: none;
+  width: 675px;
+  justify-content: space-around;
+  font-size: 23px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  text-decoration: none;
+}
+.bg-1 {
+  background: radial-gradient(
+    rgba(255, 254, 234, 1) 0%,
+    rgba(255, 254, 234, 1) 35%,
+    #26868b 100%
+  );
+}
+.bg-2 {
+  background: rgb(215, 152, 36);
+}
+.bg-3 {
+  background: rgb(19, 194, 109);
+}
+.bg-4 {
+  background: rgb(114, 205, 193);
+}
+.bg-5 {
+  background: rgb(124, 57, 129);
+}
+
+.bg-1 .wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg)
+    repeat-x;
+  position: relative;
+  width: 6400px;
+  top: 50vh;
+  left: 0;
+  height: 198px;
+  transform: translate(0, 0, 0);
+  animation: wave 7s ease infinite;
+}
+
+.bg-1 .wave:nth-of-type(2) {
+  top: 28vh;
+  animation: swell 4s ease infinite;
+  opacity: 1;
+  position: relative;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate(0, -30px);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+.bg-1 h1 {
+  font: 1em sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  color: rgb(38, 38, 54);
+  display: block;
+  top: 0vh;
+  position: relative;
+  text-align: center;
+  align-self: center;
+  animation-name: slide-up;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.bg-1 h2 {
+  text-align: center;
+  align-self: center;
+  animation-name: slide-up;
+  animation-duration: 2s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  font: 1em sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  color: rgb(38, 38, 54);
+}
+
+@keyframes slide-up {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
