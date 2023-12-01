@@ -16,7 +16,7 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: path.resolve(__dirname, "contactUs.html"),
+            template: path.resolve(__dirname, "index.html"),
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

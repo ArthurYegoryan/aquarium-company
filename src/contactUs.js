@@ -3,16 +3,12 @@ import "./contactStyle.css";
 
 const root = document.getElementById("root")
 
-const button = document.createElement("button")
-button.classList.add("openButton")
-button.innerHTML = "Contact"
+// const button = document.createElement("button")
+// button.classList.add("openButton")
+// button.innerHTML = "Contact"
 
 const div = document.createElement("div")
 div.classList.add("openDiv")
-div.classList.add("newOpen")
-
-const goHomeLink = document.createElement("a")
-goHomeLink.setAttribute("href", "https:/www.google.com")
 
 const closeButton = document.createElement("button")
 closeButton.classList.add("close")
@@ -95,8 +91,7 @@ submit.addEventListener("click", (e)=>{
 //     div.classList.remove("newOpen")
 // })
 
-goHomeLink.appendChild(closeButton)
-div.appendChild(goHomeLink)
+div.appendChild(closeButton)
 div.appendChild(h2)
 div.appendChild(form);
 div.appendChild(document.createElement("br"))
@@ -115,7 +110,7 @@ divForm2.appendChild(emailError)
 form.appendChild(textArea)
 form.appendChild(submit)
 div.appendChild(document.createElement("br"))
-root.appendChild(button)
+// root.appendChild(button)
 root.appendChild(div)
 
 
