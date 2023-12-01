@@ -1,3 +1,4 @@
+import aquariumForm from "../img/aquariumForm.webp";
 import aquariumGifAnime from "../img/aquarium.gif";
 import fish from "../img/fish.gif";
 
@@ -8,6 +9,9 @@ aquariumSection.classList.add("aquarium-section");
 
 const aquarium = document.createElement("div");
 aquarium.classList.add("aquarium");
+const aquariumBackgroundPicture = document.createElement("img");
+aquariumBackgroundPicture.setAttribute("src", aquariumForm);
+aquariumBackgroundPicture.setAttribute("alt", "Aquarium Form");
 
 const aquariumGifDiv = document.createElement("div");
 aquariumGifDiv.classList.add("aquarium-gif-div");
@@ -23,10 +27,11 @@ fishGif.setAttribute("alt", "Fish GIF");
 
 aquariumGifDiv.appendChild(aquariumGif);
 fishButton.appendChild(fishGif);
+aquarium.appendChild(aquariumBackgroundPicture);
 aquarium.appendChild(aquariumGifDiv);
 aquarium.appendChild(fishButton);
 aquariumSection.appendChild(aquarium);
 
 root.appendChild(aquariumSection);
 
-export { fishButton, aquarium, fishGif };
+export { fishButton, aquarium, fishGif, aquariumGifDiv };
