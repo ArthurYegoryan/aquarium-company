@@ -1,7 +1,8 @@
 import validateForm from "./formValidation.js";
 import "./contactStyle.css";
 
-const root = document.getElementById("root")
+// const root = document.getElementById("root")
+const header = document.querySelector("header");
 
 // const button = document.createElement("button")
 // button.classList.add("openButton")
@@ -111,7 +112,8 @@ form.appendChild(textArea)
 form.appendChild(submit)
 div.appendChild(document.createElement("br"))
 // root.appendChild(button)
-root.appendChild(div)
+// root.appendChild(div)
+header.appendChild(div)
 
 
 
