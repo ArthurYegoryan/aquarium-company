@@ -25,11 +25,12 @@
 }
 
 .openDiv{
+    justify-content: center;
     align-items: center;
     position: absolute;
     background-color: #fff;
-    width: 500px;
-    height: 600px;
+    width: 550px;
+    height: 100%;
     top: 0;
     left: 80%;
     transform: translate(-50%,-50%) scale(0.1);
@@ -46,6 +47,7 @@
 
 .close{
     background-color: #fff;
+    color: red;
     float: right;
     border: none;
     cursor: pointer;
@@ -63,13 +65,16 @@
 }
 
 .img{
-    width: 30px;
-    height: 30px;
+    margin-left:30px ;
+    width: 25px;
+    height: 25px;
 }
 
 .span{
+    font-size: 15px;
     margin-left: 10px;
 }
+
 
 .form{
     width: 500px;
@@ -87,9 +92,6 @@
     justify-content: space-between;
 }
 
-/* .divForm2{
-    margin-right: 10px;
-} */
 
 .input{
     padding: 18px;
@@ -121,5 +123,10 @@ h2{
     font-weight: 600;
     cursor: pointer;
     margin-top: 20px;
-    bottom: 20px;
+    bottom: 10px;
+}
+
+.error{
+    font-size: 10px;
+    color: red;
 }
