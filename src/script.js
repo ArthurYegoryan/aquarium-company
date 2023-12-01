@@ -1,37 +1,31 @@
-import validateForm from "./validation";
-
+import validateForm from "./formValidation.js";
+import "./contactStyle.css";
 
 const root = document.getElementById("root")
 
-
-const button = document.createElement("li")
+const button = document.createElement("button")
 button.classList.add("openButton")
 button.innerHTML = "Contact"
 
-
-
 const div = document.createElement("div")
 div.classList.add("openDiv")
+div.classList.add("newOpen")
 
+const goHomeLink = document.createElement("a")
+goHomeLink.setAttribute("href", "https:/www.google.com")
 
 const closeButton = document.createElement("button")
 closeButton.classList.add("close")
 closeButton.innerHTML = "Close"
 
-
 const h2 = document.createElement("h2")
 h2.innerHTML = "Get in touch with us"
-
-
 
 let imgPaths = ["src/img/message.png","src/img/call.png","src/img/location.png" ]
 let text = ["bestTeam@gmail.com", "+37499123456", "Hakob Hakobyan 2,Mergelyan Institute"]
 
-
 const form = document.createElement("form");
 form.classList.add("form")
-
-
 
 const firstNameInput = document.createElement("input")
 firstNameInput.type = "text"
@@ -39,18 +33,15 @@ firstNameInput.classList.add("input")
 firstNameInput.id = "firstName"
 firstNameInput.placeholder = "First Name"
 
-
 const firstNameError = document.createElement("span")
 firstNameError.classList.add("error")
 firstNameError.id = "first"
-
 
 const lastNameInput = document.createElement("input")
 lastNameInput.type = "text"
 lastNameInput.id = "lastName"
 lastNameInput.classList.add("input")
 lastNameInput.placeholder = "Last Name"
-
 
 const lastNameError = document.createElement("span")
 lastNameError.classList.add("error")
@@ -62,7 +53,6 @@ phone.id = "phone"
 phone.classList.add("input")
 phone.placeholder = "Phone number"
 
-
 const phoneError = document.createElement("span")
 phoneError.classList.add("error")
 phoneError.id = "phoneError"
@@ -73,8 +63,6 @@ email.id = "email"
 email.type = "email"
 email.placeholder = "Email address"
 
-
-
 const emailError = document.createElement("span")
 emailError.classList.add("error")
 emailError.id = "emailError"
@@ -84,40 +72,31 @@ textArea.classList.add("input")
 textArea.classList.add("textArea")
 textArea.placeholder = "Message"
 
-
-
 const submit = document.createElement("button")
 submit.classList.add("submit")
 submit.innerHTML = "Submit"
 
-
-
 const divForm = document.createElement("div")
 divForm.classList.add("divForm")
 
-
-
-
 const divForm1 = document.createElement("div")
-
 
 const divForm2 = document.createElement("div")
 divForm2.classList.add("divForm2")
-
-
 
 submit.addEventListener("click", (e)=>{
     e.preventDefault();
     validateForm()
 })
-button.addEventListener("click",()=>{
-    div.classList.add("newOpen")
-})
-closeButton.addEventListener("click",()=>{
-    div.classList.remove("newOpen")
-})
+// button.addEventListener("click",()=>{
+//     div.classList.add("newOpen")
+// })
+// closeButton.addEventListener("click",()=>{
+//     div.classList.remove("newOpen")
+// })
 
-div.appendChild(closeButton)
+goHomeLink.appendChild(closeButton)
+div.appendChild(goHomeLink)
 div.appendChild(h2)
 div.appendChild(form);
 div.appendChild(document.createElement("br"))
