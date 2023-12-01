@@ -105,20 +105,10 @@ divForm2.classList.add("divForm2")
 
 
 
-
-
-
-
-
-
-
-
-
-
-// submit.addEventListener("click", (e)=>{
-//     e.preventDefault();
-//     validateForm()
-// })
+submit.addEventListener("click", (e)=>{
+    e.preventDefault();
+    validateForm()
+})
 button.addEventListener("click",()=>{
     div.classList.add("newOpen")
 })
