@@ -22,7 +22,7 @@ const fishButtonLeftPercent = Math.ceil(fishButtonLeft * 100 / aquariumWidth);
 const aquariumGifDivWidthPercent = Number((aquariumGifDivWidth * 100 / aquariumWidth).toFixed(1));
 
 fishButton.addEventListener("click", () => {
-    let newHorizontalPoint = randomCoordinateGenerator(fishButtonLeftPercent, Math.floor(fishButtonLeftPercent + aquariumGifDivWidthPercent - fishButtonWidthPercent)); // 31, 64
+    let newHorizontalPoint = randomCoordinateGenerator(fishButtonLeftPercent, Math.floor(fishButtonLeftPercent + aquariumGifDivWidthPercent - fishButtonWidthPercent));
     const newVerticalPoint = randomCoordinateGenerator(59, 80);
 
     if (newHorizontalPoint < fishWidthCenter) {

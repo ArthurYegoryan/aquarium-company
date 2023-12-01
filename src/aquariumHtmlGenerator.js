@@ -4,6 +4,9 @@ import fish from "../img/fish.gif";
 
 const root = document.querySelector("#root");
 
+
+// Aquarium section
+
 const aquariumSection = document.createElement("section");
 aquariumSection.classList.add("aquarium-section");
 
@@ -32,6 +35,24 @@ aquarium.appendChild(aquariumGifDiv);
 aquarium.appendChild(fishButton);
 aquariumSection.appendChild(aquarium);
 
+
+// Buttons section
+
+const buttonsSection = document.createElement("section");
+buttonsSection.classList.add("buttons-section");
+
+const homePageLink = document.createElement("a");
+homePageLink.setAttribute("href", "");
+homePageLink.setAttribute("target", "_blank");
+
+const homePagemButton= document.createElement("button");
+homePagemButton.classList.add("home-page-button");
+homePagemButton.innerText = "Home page";
+
+homePageLink.appendChild(homePagemButton);
+buttonsSection.appendChild(homePageLink);
+
 root.appendChild(aquariumSection);
+root.appendChild(buttonsSection);
 
 export { fishButton, aquarium, fishGif, aquariumGifDiv };
