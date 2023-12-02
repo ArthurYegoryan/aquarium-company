@@ -30,7 +30,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"], // "style-loader"
+                use: [new MiniCssExtractPlugin().loader, "css-loader", "style-loader"],
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
