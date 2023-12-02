@@ -3,7 +3,7 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
     performance: {
@@ -30,7 +30,7 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/i,
-                use: [new MiniCssExtractPlugin().loader, "css-loader", "style-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", ], // "style-loader", 
             },
             {
                 test: /\.(png|jpe?g|gif|svg|webp)$/i,
@@ -56,43 +56,43 @@ module.exports = {
             },
         ],
     },
-    // optimization: {
-    //     minimizer: [
-    //         "...",
-    //         new ImageMinimizerPlugin({
-    //             minimizer: {
-    //                 implementation: ImageMinimizerPlugin.imageminMinify,
-    //                 options: {
-    //                     plugins: [
-    //                         ["gifsicle", { interlaced: true }],
-    //                         ["jpegtran", { progressive: true }],
-    //                         ["optipng", { optimizationLevel: 5 }],
-    //                         [
-    //                             "svgo",
-    //                             {
-    //                                 plugins: [
-    //                                     {
-    //                                         name: "preset-default",
-    //                                         params: {
-    //                                             overrides: {
-    //                                                 removeViewBox: false,
-    //                                                 addAttributesToSVGElement: {
-    //                                                     params: {
-    //                                                         attributes: [
-    //                                                             { xmlns: "http://www.w3.org/2000/svg" },
-    //                                                         ],
-    //                                                     },
-    //                                                 },
-    //                                             },
-    //                                         },
-    //                                     },
-    //                                 ],
-    //                             },
-    //                         ],
-    //                     ],
-    //                 },
-    //             },
-    //         }),
-    //     ],
-    // },
+    optimization: {
+        minimizer: [
+            "...",
+            new ImageMinimizerPlugin({
+                minimizer: {
+                    implementation: ImageMinimizerPlugin.imageminMinify,
+                    options: {
+                        plugins: [
+                            ["gifsicle", { interlaced: true }],
+                            ["jpegtran", { progressive: true }],
+                            ["optipng", { optimizationLevel: 5 }],
+                            [
+                                "svgo",
+                                {
+                                    plugins: [
+                                        {
+                                            name: "preset-default",
+                                            params: {
+                                                overrides: {
+                                                    removeViewBox: false,
+                                                    addAttributesToSVGElement: {
+                                                        params: {
+                                                            attributes: [
+                                                                { xmlns: "http://www.w3.org/2000/svg" },
+                                                            ],
+                                                        },
+                                                    },
+                                                },
+                                            },
+                                        },
+                                    ],
+                                },
+                            ],
+                        ],
+                    },
+                },
+            }),
+        ],
+    },
 }
